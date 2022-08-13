@@ -13,5 +13,12 @@ const ButtonComponent = styled.button`
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition: all 0.2s ease-in;
+  &:hover {
+    background-color: #0c68fb;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
 `;
 export default Button;

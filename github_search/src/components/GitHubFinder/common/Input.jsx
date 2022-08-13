@@ -9,7 +9,9 @@ const Input = () => {
         <SearchIcon />
       </Label>
       <InputComponent placeholder="Search GitHub username..." />
-      <Button text="Search" />
+      <ButtonWrapper>
+        <Button text="Search" />
+      </ButtonWrapper>
     </InputWrapper>
   );
 };
@@ -25,7 +27,7 @@ const InputWrapper = styled.div`
 
 const InputComponent = styled.input`
   color: var(--white);
-  height: 5rem;
+  height: 3rem;
   background-color: var(--container-color);
   width: 50rem;
   border: none;
@@ -43,19 +45,10 @@ const Label = styled.label`
   height: 30px;
   color: var(--icon-color);
 `;
-export default Input;
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  className="h-6 w-6"
-  fill="none"
-  viewBox="0 0 24 24"
-  stroke="currentColor"
-  strokeWidth={2}
->
-  <path
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-  />
-</svg>;
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: end;
+  width: 25rem;
+`;
+export default Input;

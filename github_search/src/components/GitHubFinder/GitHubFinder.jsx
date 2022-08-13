@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Input from "./common/Input";
 import Header from "./Header/Header";
-import Info from "./Info";
+import Info from "./MainInfo/Info";
 
 const GitHubFinder = () => {
   return (
