@@ -1,13 +1,36 @@
 import { createGlobalStyle } from "styled-components";
 
+import "../assets/fonts/SpaceMono-Bold.ttf";
+import "../assets/fonts/SpaceMono-Regular.ttf";
+
 export const GlobalStyle = createGlobalStyle`
     :root{
-        --body-color:#040029;
-        --container-color:#12255f;
-        --white:#FFFFFD;
+        --body-color:#141d2f;
+        --container-color:#1e2a47;
+        --white:#FFFFFf;
         --grey:#ADADAD;
-        --search-color:#0061FF;
+        --search-color:#0079ff;
         --icon-color:#0645cc;
+
+
+    }
+
+    @font-face {
+      font-family: "SpaceMonoBold";
+      src: url("/src/assets/fonts/SpaceMono-Bold.ttf") format("truetype");
+      font-weight:bold
+    }
+    @font-face {
+      font-family: "SpaceMonoRegular";
+      src: url("/src/assets/fonts/SpaceMono-Regular.ttf");
+      font-weight:normal
+    }
+
+    h1{
+      font-family:"SpaceMonoBold";
+      font-size:26px;
+      line-height: 38px;
+      font-weight:bold ;
 
 
     }
@@ -47,6 +70,8 @@ img, picture, video, canvas, svg {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
+
 
 ul{
     margin: 0;

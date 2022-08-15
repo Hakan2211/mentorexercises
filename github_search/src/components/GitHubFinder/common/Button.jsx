@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const Button = ({ text }) => {
-  return <ButtonComponent>{text}</ButtonComponent>;
+const Button = ({ children, ...rest }) => {
+  return <ButtonComponent {...rest}>{children}</ButtonComponent>;
 };
 
 const ButtonComponent = styled.button`

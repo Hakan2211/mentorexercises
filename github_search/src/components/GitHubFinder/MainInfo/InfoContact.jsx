@@ -7,35 +7,31 @@ import Link from "../../../assets/icons/Contact/Link";
 const InfoContact = () => {
   return (
     <Wrapper>
-      <ContactContainer>
-        <ContactContainerTextIcon>
-          <ContactIcon>
-            <Location />
-          </ContactIcon>
-          <ContactInfoText>San Francisco</ContactInfoText>
-        </ContactContainerTextIcon>
-        <ContactContainerTextIcon>
-          <ContactIcon>
-            <Link />
-          </ContactIcon>
-          <ContactInfoText>Homepage</ContactInfoText>
-        </ContactContainerTextIcon>
-      </ContactContainer>
+      <ContactContainerTextIcon>
+        <ContactIcon>
+          <Location />
+        </ContactIcon>
+        <ContactInfoText>San Francisco</ContactInfoText>
+      </ContactContainerTextIcon>
+      <ContactContainerTextIcon>
+        <ContactIcon>
+          <Link />
+        </ContactIcon>
+        <ContactInfoText>Homepage</ContactInfoText>
+      </ContactContainerTextIcon>
 
-      <ContactContainer>
-        <ContactContainerTextIcon>
-          <ContactIcon>
-            <FaTwitter style={{ width: "20px", height: "20px" }} />
-          </ContactIcon>
-          <ContactInfoText>Twitter</ContactInfoText>
-        </ContactContainerTextIcon>
-        <ContactContainerTextIcon>
-          <ContactIcon>
-            <Work />
-          </ContactIcon>
-          <ContactInfoText>CompanyName</ContactInfoText>
-        </ContactContainerTextIcon>
-      </ContactContainer>
+      <ContactContainerTextIcon>
+        <ContactIcon>
+          <FaTwitter style={{ width: "20px", height: "20px" }} />
+        </ContactIcon>
+        <ContactInfoText>Twitter</ContactInfoText>
+      </ContactContainerTextIcon>
+      <ContactContainerTextIcon>
+        <ContactIcon>
+          <Work />
+        </ContactIcon>
+        <ContactInfoText>CompanyName</ContactInfoText>
+      </ContactContainerTextIcon>
     </Wrapper>
   );
 };
@@ -46,12 +42,6 @@ const Wrapper = styled.div`
   width: 100%;
   height: 10rem;
   margin-top: 3rem;
-`;
-
-const ContactContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 `;
 
 const ContactContainerTextIcon = styled.div`

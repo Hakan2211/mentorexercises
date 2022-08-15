@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Avatar from "../common/Avatar";
 import InfoContent from "./InfoContent";
 
-const Info = () => {
+const Info = ({ user }) => {
+  console.log(user, "UserInfo");
   return (
     <Wrapper>
       <AvatarContainer>
