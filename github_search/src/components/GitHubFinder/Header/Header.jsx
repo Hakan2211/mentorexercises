@@ -15,6 +15,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 3.6rem;
+  width: 73rem;
+  height: 3.8rem;
 `;
 export default Header;

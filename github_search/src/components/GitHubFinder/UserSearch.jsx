@@ -26,10 +26,11 @@ const InputWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: var(--container-color);
-  padding: 1rem;
-  border-radius: 5px;
+  border-radius: 15px;
   align-items: center;
   margin-bottom: 2rem;
+  width: 73rem;
+  height: 6.9rem;
 `;
 
 const SearchInput = styled.input`
@@ -39,11 +40,12 @@ const SearchInput = styled.input`
   width: 50rem;
   border: none;
   outline: none;
-  font-size: 20px;
-  margin-left: 2rem;
+  font-size: 18px;
+  font-family: "SpaceMonoRegular";
+  margin-left: 2.4rem;
   ::placeholder {
     color: var(--white);
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
@@ -53,9 +55,10 @@ const SearchWrapper = styled.div`
 `;
 
 const SearchIconWrapper = styled.div`
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   color: var(--icon-color);
+  margin-left: 3.2rem;
 `;
 
 export default UserSearch;

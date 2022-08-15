@@ -4,8 +4,8 @@ const Avatar = ({ src }) => {
   return <AvatarPicture src={src} />;
 };
 const AvatarPicture = styled.img`
-  height: 100px;
-  width: 100px;
+  height: 117px;
+  width: 117px;
   border-radius: 50%;
   cursor: pointer;
 `;

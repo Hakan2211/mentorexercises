@@ -25,7 +25,9 @@ const Wrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--body-color);
-  border-radius: 5px;
+  border-radius: 15px;
+  width: 48rem;
+  margin-right: 4.7rem;
 `;
 
 const InfoContainer = styled.div`

@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   width: 100%;
   height: 10rem;
-  margin-top: 3rem;
+  margin-top: 3.7rem;
 `;
 
 const ContactContainerTextIcon = styled.div`

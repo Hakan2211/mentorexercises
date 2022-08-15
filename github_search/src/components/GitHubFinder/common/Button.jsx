@@ -8,11 +8,12 @@ const ButtonComponent = styled.button`
   background-color: var(--search-color);
   color: var(--white);
   border: none;
-  width: 10rem;
-  height: 46px;
+  width: 10.6rem;
+  height: 5rem;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin-right: 9.5px;
   transition: all 0.2s ease-in;
   &:hover {
     background-color: #0c68fb;

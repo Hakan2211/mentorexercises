@@ -17,18 +17,22 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  width: 8.9rem;
+  height: 2rem;
 `;
 const ThemeText = styled.h3`
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: bold;
   color: var(--white);
   margin-right: 2rem;
   letter-spacing: 2px;
+  font-family: "SpaceMonoRegular";
+  letter-spacing: 2.5px;
 `;
 
 const ThemeIcon = styled.div`
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
 `;
 export default ThemeToggle;

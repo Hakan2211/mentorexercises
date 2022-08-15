@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
         --white:#FFFFFf;
         --grey:#ADADAD;
         --search-color:#0079ff;
-        --icon-color:#0645cc;
+        --icon-color:#0079ff;
 
 
     }
