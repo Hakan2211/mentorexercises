@@ -32,6 +32,7 @@ const GitHubFinder = () => {
         onChange={(e) => setSearchValue(e.target.value)}
         aria-label="search input"
         onUserSearch={handleUserSearch}
+        user={gitHubUser}
       />
       <Info user={gitHubUser} />
     </Wrapper>

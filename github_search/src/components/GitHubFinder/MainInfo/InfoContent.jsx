@@ -4,26 +4,30 @@ import InfoContentBox from "./InfoContentBox";
 import DateFormatter from "../utility/DateFormatter";
 
 const InfoContent = ({ user }) => {
-  const { login, name, created_at } = user;
-  const createdAt = created_at;
+  const { login, name, bio } = user;
+  const createdAt = user?.created_at;
+
+  console.log(createdAt);
 
   return (
     <Wrapper>
       <ContentHeader>
         <InfoName>
           <Name>{login}</Name>
-          {/* <Date>Joined {format({ created_at }, "dd-MMM-yyyy")}</Date> */}
+          {/* <Date>Joined {format(parseISO({ createdAt }), "dd-MMM-yyyy")}</Date> */}
           <Date>
             Joined <DateFormatter date={createdAt} />
           </Date>
         </InfoName>
         <NameLink>{name ? name : login}</NameLink>
       </ContentHeader>
-      <ProfileTextWrapper>This profile has no bio</ProfileTextWrapper>
+      <ProfileTextWrapper>
+        {bio ? bio : "This profile has no bio"}
+      </ProfileTextWrapper>
 
       {/* * TODO:Fix Style From Figma */}
-      <InfoContentBox />
-      <InfoContact />
+      <InfoContentBox user={user} />
+      <InfoContact user={user} />
     </Wrapper>
   );
 };
@@ -50,7 +54,7 @@ const InfoName = styled.div`
 
 const Name = styled.h1`
   line-height: 38.51px;
-  width: 17.6rem;
+  //width: 17.6rem;
   height: 3.9rem;
   margin-bottom: 2px;
 `;
@@ -59,7 +63,7 @@ const NameLink = styled.p`
   font-size: 16px;
 
   line-height: 23.7px;
-  width: 7.9rem;
+  //width: 7.9rem;
   height: 2.9rem;
 `;
 
@@ -76,7 +80,6 @@ const ProfileTextWrapper = styled.div`
   width: 48rem;
   color: var(--grey);
   margin-top: 3rem;
-  height: 2.5rem;
   opacity: 0.75;
   line-height: 25px;
   margin-bottom: 3.2rem;

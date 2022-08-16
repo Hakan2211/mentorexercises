@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import SearchIcon from "../../assets/icons/SearchIcon";
 import Button from "./common/Button";
+import ErrorText from "./Error/ErrorText";
 
-const UserSearch = ({ value, onChange, onUserSearch }) => {
+const UserSearch = ({ value, onChange, onUserSearch, user }) => {
   return (
     <InputWrapper>
       <SearchWrapper>
@@ -16,6 +17,7 @@ const UserSearch = ({ value, onChange, onUserSearch }) => {
           onChange={onChange}
         />
       </SearchWrapper>
+      {user.message ? <ErrorText>No results</ErrorText> : ""}
 
       <Button onClick={onUserSearch}>Search</Button>
     </InputWrapper>
@@ -37,7 +39,7 @@ const SearchInput = styled.input`
   color: var(--white);
   height: 3rem;
   background-color: var(--container-color);
-  width: 50rem;
+  width: 40rem;
   border: none;
   outline: none;
   font-size: 18px;

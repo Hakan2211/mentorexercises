@@ -6,12 +6,21 @@ const Info = ({ user }) => {
   console.log(user, "UserInfo");
   const { avatar_url } = user;
   return (
-    <Wrapper>
-      <AvatarContainer>
-        <Avatar src={avatar_url} />
-      </AvatarContainer>
-      <InfoContent user={user} />
-    </Wrapper>
+    <>
+      {!user.message ? (
+        <Wrapper>
+          <AvatarContainer>
+            <Avatar src={avatar_url} />
+          </AvatarContainer>
+
+          <InfoContent user={user} />
+        </Wrapper>
+      ) : (
+        <TryAgainMessage>
+          No user found with that name. Try another name.
+        </TryAgainMessage>
+      )}
+    </>
   );
 };
 
@@ -31,6 +40,13 @@ const AvatarContainer = styled.div`
   display: flex;
   align-items: start;
   justify-content: center;
+`;
+
+const TryAgainMessage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 `;
 
 export default Info;

@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
         --grey:#ADADAD;
         --search-color:#0079ff;
         --icon-color:#0079ff;
+        --error:#F74646;
 
 
     }

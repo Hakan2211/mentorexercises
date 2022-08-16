@@ -1,13 +1,18 @@
+import { useState } from "react";
 import styled from "styled-components";
-import LightIcon from "../../../assets/icons/Themes/LightIcon";
+import MoonIcon from "../../../assets/icons/Themes/MoonIcon";
+import SunIcon from "../../../assets/icons/Themes/SunIcon";
 
 const ThemeToggle = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
   return (
-    <Wrapper>
-      <ThemeText>Light</ThemeText>
-      <ThemeIcon>
-        <LightIcon />
-      </ThemeIcon>
+    <Wrapper onClick={toggleTheme}>
+      <ThemeText>{isDarkMode ? "Light" : "Dark"}</ThemeText>
+      <ThemeIcon>{isDarkMode ? <SunIcon /> : <MoonIcon />}</ThemeIcon>
     </Wrapper>
   );
 };
@@ -29,6 +34,10 @@ const ThemeText = styled.h3`
   letter-spacing: 2px;
   font-family: "SpaceMonoRegular";
   letter-spacing: 2.5px;
+`;
+
+const DarkText = styled(ThemeText)`
+  color: #697c9a;
 `;
 
 const ThemeIcon = styled.div`

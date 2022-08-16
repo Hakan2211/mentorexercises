@@ -1,7 +1,10 @@
-import { format } from "date-fns";
+import { format, parseISO, parse, isValid } from "date-fns";
 
 const DateFormatter = ({ date }) => {
-  return format(new Date(date), "dd MMM yyyy");
+  const dateToFormat = new Date(date);
+  if (isValid(parseISO(dateToFormat))) {
+    return format(parse(dateToFormat), "dd MMM yyyy");
+  }
 };
 
 export default DateFormatter;

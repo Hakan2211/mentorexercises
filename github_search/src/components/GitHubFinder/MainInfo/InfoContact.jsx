@@ -4,33 +4,54 @@ import Location from "../../../assets/icons/Contact/Location";
 import Work from "../../../assets/icons/Contact/Work";
 import Link from "../../../assets/icons/Contact/Link";
 
-const InfoContact = () => {
+const InfoContact = ({ user }) => {
+  const { location, company, twitter_username, blog } = user;
   return (
     <Wrapper>
       <ContactContainerTextIcon>
         <ContactIcon>
           <Location />
         </ContactIcon>
-        <ContactInfoText>San Francisco</ContactInfoText>
+        <ContactInfoText>
+          {location ? (
+            location
+          ) : (
+            <NotAvailableText>Not Available</NotAvailableText>
+          )}
+        </ContactInfoText>
       </ContactContainerTextIcon>
       <ContactContainerTextIcon>
         <ContactIcon>
           <Link />
         </ContactIcon>
-        <ContactInfoText>Homepage</ContactInfoText>
+        <ContactInfoText>
+          {blog ? blog : <NotAvailableText>Not Available</NotAvailableText>}
+        </ContactInfoText>
       </ContactContainerTextIcon>
 
       <ContactContainerTextIcon>
         <ContactIcon>
           <FaTwitter style={{ width: "20px", height: "20px" }} />
         </ContactIcon>
-        <ContactInfoText>Twitter</ContactInfoText>
+        <ContactInfoText>
+          {twitter_username ? (
+            twitter_username
+          ) : (
+            <NotAvailableText>Not Available</NotAvailableText>
+          )}
+        </ContactInfoText>
       </ContactContainerTextIcon>
       <ContactContainerTextIcon>
         <ContactIcon>
           <Work />
         </ContactIcon>
-        <ContactInfoText>CompanyName</ContactInfoText>
+        <ContactInfoText>
+          {company ? (
+            company
+          ) : (
+            <NotAvailableText>Not Available</NotAvailableText>
+          )}
+        </ContactInfoText>
       </ContactContainerTextIcon>
     </Wrapper>
   );
@@ -46,7 +67,7 @@ const Wrapper = styled.div`
 
 const ContactContainerTextIcon = styled.div`
   display: flex;
-  gap: 10px;
+
   align-items: center;
   height: 20px;
 `;
@@ -54,10 +75,17 @@ const ContactContainerTextIcon = styled.div`
 const ContactIcon = styled.div`
   height: 20px;
   width: 20px;
+  margin-right: 1.6rem;
 `;
 
 const ContactInfoText = styled.h3`
+  font-size: 15px;
+  font-family: "SpaceMonoRegular";
+  font-weight: normal;
+`;
+
+const NotAvailableText = styled.p`
   font-size: 12px;
-  margin-right: 5rem;
+  opacity: 0.5;
 `;
 export default InfoContact;
